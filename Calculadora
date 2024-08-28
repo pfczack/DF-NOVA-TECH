@@ -1,0 +1,41 @@
+#include <stdio.h> //inclui a biblioteca padrão de entrada e saida
+#include <stdlib.h> //inclui a biblioteca para usar a função exit()
+
+int main(){
+    
+    char operador; //operador que o usuário vai digitar
+    float num1, num2; //números que o usuário vai digitar
+    
+    printf("Digite um operador (+. -, *, /): ");
+    scanf("%c", &operador); //Lê o operador do usuário
+    
+    printf("Digite dois números: ");
+    scanf("%f %f", &num1, &num2); //Lê os dois números do usuário
+    
+    //Faz a operação de acordo com o operador escolhido
+    switch (operador){
+        case '+':
+            printf("%.2f + %.2f = %.2f", num1, num2, num1 + num2);
+            break;
+        case '-':
+            printf("%.2f - %.2f = %.2f", num1, num2, num1 - num2);
+            break;
+        case '*':
+            printf("%.2f * %.2f = %.2f", num1, num2, num1 * num2);
+            break;
+        case '/':
+            if (num2 == 0){ //Divisão por zero não é permitida
+                printf("Não é possível dividir por zero!");
+                exit(0); //Sai do programa
+            }else{
+                printf("%2.f / %2.f = %2.f", num1, num2, num1 / num2);
+            }
+            break;
+            
+        default:
+            printf("Operador Inválido!");
+            break;
+    }
+    
+    return 0;
+}
