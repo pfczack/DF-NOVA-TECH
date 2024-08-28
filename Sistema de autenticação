@@ -1,0 +1,43 @@
+#include <stdio.h> //inclusC#o da biblioteca padrC#o de entrada e saC-da
+#include <stdbool.h> //inclusC#o da biblioteca para uso da sintaxe booleana
+
+int main() { // Sintaxe principal do sistema
+
+	char nome[30]; //Declaração da variC!vel para armazenar o nome
+	int anoNascimento, idade; //DeclaraC'C#o das variC!veis para armazenar idade e ano de nascimento
+	float altura; //DeclaraC'C#o da variC!vel para armazenar altura
+	bool maiorDeIdade; //DeclaraC'C#o da variC!vel booleana para verificar se C) mior de idade
+
+	//Solicitação do nome e do ano de nascimento
+	printf("Vamos começar pelo seu nome, pode digitá-lo: ");
+	scanf("%s", nome);
+
+	printf("Agora, me informe o ano do seu nascimento. Pode digitá-lo: ");
+	scanf("%d", &anoNascimento);
+
+	//Cálculo da idade
+	idade = 2024 - anoNascimento;
+
+	//Verificação se a pessoa C) maior de idade
+	if (idade >= 18) {
+		maiorDeIdade = true;
+	} else {
+		maiorDeIdade = false;
+	}
+
+	//Solicitação da altura
+	printf("Vamos continuar com sua altura (em metros). Pode digitá-la: ");
+	scanf("%f", &altura);
+
+	//Apresentação do resultado utilizando sintaxe booleana
+	printf("Vejo que você, %s, tem %d anos, ", nome, idade);
+	if(maiorDeIdade) {
+		printf("vejo também que é maior de idade ");
+	} else {
+		printf("vejo também que é menor de idade ");
+	}
+
+	printf("e mede %.2f centímetros de altura. ", altura);
+
+	return 0;
+}
