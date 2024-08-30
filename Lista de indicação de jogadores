@@ -1,0 +1,51 @@
+#include <stdio.h> // Biblioteca de entrada e saída
+#include <string.h> // Biblioteca de strings
+
+
+int main() {
+    
+char lista[10][50]; //Declaração de array
+
+strcpy(lista[0], "?");
+strcpy(lista[1], "?");
+strcpy(lista[2], "?");
+
+printf("Faça sua lista de jogadores:  \n");
+
+int posicao = 0; //Para controlar a posição
+
+int i;
+
+  for (i = 0; i < posicao; i++) {
+      printf("%d - %s\n", i+1, lista[i]);
+}
+
+// Lendo a entrada do usuário e adicionando novos elementos à lista
+   while (posicao < 3) {
+      char entrada[50];
+      fgets(entrada, 50, stdin);
+      printf("\nDigite o nome do próximo jogador:  ");
+      
+      // Removendo o caractere '\n' que fica na entrada após a tecla 'Enter'
+      entrada[strcspn(entrada, "\n")] = 0;
+      
+      // Encerrando o loop caso o usuário digite 'sair'
+      if (strcmp(entrada, "Sair") == 0) {
+         break;
+      }
+      
+      // Adicionando a nova compra ao final da lista
+      strcpy(lista[posicao], entrada);
+      posicao++;
+   }
+   
+      // Exibindo os elementos da lista atualizada na tela
+   printf("\nLista de jogadores indicados: \n");
+   
+   // Loop para exibir cada elemento da lista na tela
+   for (i = 0; i < posicao; i++) {
+      printf("%d - %s\n", i+1, lista[i]);
+   }
+   
+   return 0;
+}
