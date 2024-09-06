@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+header{
+    box-shadow: 0px 3px 10px;
+    background-color: #70a8e4; /* Cor de fundo azul para o cabeçalho */
+    color: white; /* Cor do texto branca */
+    padding: 20px 0; /* Espaçamento interno no topo e embaixo */
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+}
+body{
+    background-color: rgba(128, 128, 128, 0.507);
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    line-height: 1.6; /* Ajusta o espaçamento entre as linhas */
+    background-color: #f4f4f4; /* Define uma cor de fundo clara */ 
+    color: #333; /* Define a cor do texto */
+}
+header .logo img {
+    width: 150px; /* Largura fixa para a imagem da logo */
+    height: auto; /* Altura ajustada automaticamente para manter a proporção */
+}
+#menu{
+    display: flex;
+    height: 50px;
+}
+#menu ul li{
+    list-style: none;
+    padding: 0;
+    display: inline;
+}
+#menu ul li{
+    display: inline;
+}
+#menu ul li a{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-weight: 900;
+    transition: background .2s;
+}
+#menu ul li a:hover{
+    background-color: rgba(36, 240, 255, 0.541);
+}
+main {
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo principal */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para as imagens dentro da seção principal */
+main img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */ 
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 20px; /* Espaçamento superior para separar a imagem do conteúdo anterior */
+}
+
+/* Estilos para os títulos principais e secundários */
+main h1, main h2 {
+    margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo seguinte */
+    color: #0056b3; /* Define uma cor azul para os títulos */
+}
+main p, main ul{
+    text-align: justify;
+    padding-bottom: 15px;
+}
+main table{
+    border-collapse: collapse;
+    overflow: auto;
+    width: 100%;
+}
+main table th, main table td{
+    border: 2px solid gray;
+    padding: 10px;
+}
+main table caption{
+    font-size: large;
+    font-weight: bold;
+}
+tbody tr:nth-child(2n){
+    background-color: lightgray;
+}
+thead{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+footer {
+    background-color: #333; /* Cor de fundo escura para o rodapé */
+    color: white; /* Cor do texto branca */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 10px 0; /* Espaçamento interno no topo e embaixo */
+    margin-top: 40px; /* Espaçamento superior para separar o rodapé do conteúdo principal */
+}
+
+/*
+/* Resetando margens e paddings padrão para todos os elementos 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos nas dimensões totais dos elementos *
+}
+
+/* Estilos para o corpo do documento 
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão 
+    line-height: 1.6; /* Ajusta o espaçamento entre as linhas 
+    background-color: #f4f4f4; /* Define uma cor de fundo clara 
+    color: #333; /* Define a cor do texto *
+}
+
+/* Estilo para o cabeçalho da página *
+header {
+    background-color: #0056b3; /* Cor de fundo azul para o cabeçalho *
+    color: white; /* Cor do texto branca *
+    padding: 20px 0; /* Espaçamento interno no topo e embaixo *
+    text-align: center; /* Centraliza o conteúdo do cabeçalho *
+}
+
+/* Estilo para a logo dentro do cabeçalho *
+header .logo img {
+    width: 150px; /* Largura fixa para a imagem da logo *
+    height: auto; /* Altura ajustada automaticamente para manter a proporção *
+}
+
+/* Estilos para a lista de navegação *
+nav ul {
+    list-style-type: none; /* Remove os marcadores padrão da lista *
+}
+
+/* Estilos para cada item da lista de navegação *
+nav ul li {
+    display: inline; /* Exibe os itens em linha, ao invés de em blocos verticais *
+    margin: 0 15px; /* Espaçamento lateral entre os itens *
+}
+
+/* Estilos para os links de navegação *
+nav ul li a {
+    color: white; /* Cor do texto dos links *
+    text-decoration: none; /* Remove sublinhado dos links *
+    font-weight: bold; /* Define o texto como negrito *
+}
+
+/* Estilo para a seção principal do conteúdo *
+main {
+    padding: 20px; /* Espaçamento interno ao redor do conteúdo principal *
+    text-align: center; /* Centraliza o texto *
+}
+
+/* Estilo para as imagens dentro da seção principal *
+main img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner 
+    height: auto; /* Mantém a proporção da imagem *
+    margin-top: 20px; /* Espaçamento superior para separar a imagem do conteúdo anterior *
+}
+
+/* Estilos para os títulos principais e secundários *
+main h1, main h2 {
+    margin-bottom: 20px; /* Espaçamento inferior para separar do conteúdo seguinte *
+    color: #0056b3; /* Define uma cor azul para os títulos *
+}
+
+/* Estilo para o contêiner de vídeo *
+.video-container {
+    margin-top: 20px; /* Espaçamento superior para separar o vídeo do conteúdo anterior *
+    text-align: center; /* Centraliza o vídeo na página *
+}
+
+/* Estilo para o elemento de áudio *
+audio {
+    margin-top: 20px; /* Espaçamento superior para separar o áudio do conteúdo anterior *
+}
+
+/* Estilo para o rodapé da página *
+footer {
+    background-color: #333; /* Cor de fundo escura para o rodapé *
+    color: white; /* Cor do texto branca *
+    text-align: center; /* Centraliza o texto no rodapé *
+    padding: 10px 0; /* Espaçamento interno no topo e embaixo *
+    margin-top: 40px; /* Espaçamento superior para separar o rodapé do conteúdo principal *
+}*/
