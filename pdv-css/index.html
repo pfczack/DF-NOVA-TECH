@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV Simples</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <!--Importando a fonte do da API Google-->
+    <link rel="stylesheet" href="fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap">
+    <!--Adicionando a biblioteca Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <h1>PDV Simples</h1>
+    </header>
+    <main>
+        <!--Seleção de produtos disponíveis para compra-->
+        <section class="products">
+            <h2>Produtos1</h2>
+
+        <!--Produto 1 com preço e botão para adicionar ao carrinho-->
+        <div class="product">
+            <h3>Produto 1</h3>
+            <p>Preço R$10,00</p>
+            <button>Adicionar ao carrinho</button>
+        </div>
+
+        <!--Produto 2 com preço e botão para adicionar ao carrinho-->
+        <div class="product">
+            <h3>Produto 2</h3>
+            <p>Preço R$20,00</p>
+            <button>Adicionar ao carrinho</button>
+        </div>
+        
+        <!--Produto 3 com preço e botão para adicionar ao carrinho-->
+        <div class="product">
+            <h3>Produto 3</h3>
+            <p>Preço R$50,00</p>
+            <button>Adicionar ao carrinho</button>
+        </div>
+        </section>
+        
+        <!--Seção do carrinho de compras-->
+        <aside class="cart">
+            <h2>Carrinho</h2>
+            <ul>
+                <li>Produto 1 - R$10,00</li>
+                <li>Produto 2 - R$20,00</li>
+                <li>Produto 3 - R$50,00</li>
+            <!--Produtos serão adicionados dinamicamente aqui-->
+            </ul>
+
+            <!--Exibição total da compra-->
+            <p>Total:R$80,00</p>
+
+            <!--Botão para finalizar compra-->
+            <button>Finalizar compra</button>
+        </aside>
+    </main>   
+</body>
+<footer>
+    <h1>Desenvolvido por Isaac</h1>
+</footer>
+</html>
