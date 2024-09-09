@@ -1,0 +1,21 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('img/imgbg.webp');
+    background-size: cover;
+    color: #333;
+    text-align: center;
+}
+
+/*Cabeçalho*/
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('img/imgh.jfif');
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+}
+
+header h1{
+    color: white;
+    font-size: 3rem;
+}
