@@ -1,0 +1,235 @@
+/* Estilos globais do site */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o site */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto padrão */
+}
+
+/* Estilos do cabeçalho */
+header {
+    position: fixed; /* Faz o cabeçalho ficar fixo no topo */
+    top: 0; /* Alinha o cabeçalho ao topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    background-color: #007b5e; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    display: flex; /* Usa flexbox para alinhar logo e navegação */
+    justify-content: space-between; /* Distribui os itens no espaço disponível */
+    padding: 10px; /* Espaçamento interno do cabeçalho */
+    font-weight: bold; /* Deixa o texto do cabeçalho em negrito */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Ajusta o espaço no topo do conteúdo para acomodar o cabeçalho fixo */
+main {
+    padding-top: 80px; /* Ajuste este valor conforme a altura do cabeçalho */
+}
+
+/* Estilos para o logo no cabeçalho */
+header .logo img {
+    height: 80px; /* Define a altura da logo */
+    border-radius: 50%;
+}
+header .logo img:hover{
+    animation: fly 2s linear infinite alternate;
+}
+@keyframes fly{
+    0%{
+        transform: translateX(50px);
+    }
+    100%{
+        transform: translateX(calc(30vw - 50px)) ;
+    }
+}
+
+/* Estilos do menu de navegação */
+header nav ul {
+    list-style: none; /* Remove os marcadores da lista de navegação */
+    display: flex; /* Alinha os itens da navegação horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens de navegação */
+}
+header nav ul {
+    animation: is-bouncing 3s ease;
+    animation-duration: 5s;
+}
+@keyframes is-bouncing{
+    0%{
+        transform: translateY(10px)
+    }
+    25%{
+        transform: translateY(13px)
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(8px)
+    }
+}
+
+header nav ul li a {
+    color: white; /* Define a cor dos links de navegação */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Deixa os links em negrito */
+}
+
+/* Estilos do banner */
+.banner {
+    display: flex; /* Alinha o texto e a imagem do banner lado a lado */
+    align-items: center; /* Centraliza verticalmente os elementos no banner */
+    padding: 20px; /* Espaçamento interno do banner */
+    background-color: #e2f0d9; /* Cor de fundo suave para o banner */
+}
+
+.banner-text {
+    flex: 1; /* O texto ocupa o espaço restante */
+}
+
+.banner img {
+    width: 300px; /* Define a largura da imagem do banner */
+    border-radius: 10px; /* Borda arredondada na imagem */
+    margin-left: 20px; /* Espaço entre o texto e a imagem */
+    margin-top: 80px;
+}
+.banner img:hover{
+    animation: destaque 3s ease-in-out;
+}
+@keyframes destaque{
+    0%{
+       transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+/* Seção de introdução */
+main .intro {
+    display: flex; /* Alinha a imagem e o texto da introdução lado a lado */
+    align-items: center; /* Centraliza verticalmente os elementos da introdução */
+    padding: 20px; /* Espaçamento interno da seção */
+    background-color: #fff; /* Cor de fundo branco */
+}
+
+main .intro img {
+    width: 50%; /* A imagem ocupa metade da largura disponível */
+    border-radius: 10px; /* Borda arredondada na imagem */
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+main .intro .text h2 {
+    color: #007b5e; /* Cor de destaque para o título */
+}
+
+main .intro .text p {
+    font-size: 1.1em; /* Aumenta o tamanho do texto para melhorar a legibilidade */
+}
+
+/* Seção de especialidades */
+#especialidades {
+    padding: 20px; /* Espaçamento interno da seção */
+    background-color: #e9e9e9; /* Cor de fundo suave */
+}
+
+#especialidades h2 {
+    text-align: center; /* Centraliza o título da seção */
+}
+
+#especialidades ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha as especialidades horizontalmente */
+    justify-content: space-around; /* Espaçamento igual entre os itens */
+}
+
+#especialidades ul li {
+    background-color: #007b5e; /* Cor de fundo das especialidades */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Seção de galeria de fotos */
+#galeria {
+    padding: 20px; /* Espaçamento interno da seção */
+}
+
+#galeria h2 {
+    text-align: center; /* Centraliza o título da galeria */
+}
+
+.gallery {
+    display: flex; /* Alinha as imagens lado a lado */
+    gap: 10px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centraliza a galeria na página */
+}
+
+.gallery img {
+    width: 200px; /* Define a largura de cada imagem da galeria */
+    height: 150px; /* Define a altura de cada imagem da galeria */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 5px; /* Bordas arredondadas nas imagens */
+}
+
+/* Estilos do formulário de contato */
+#formulario-contato {
+    display: flex; /* Usa Flexbox para centralizar o formulário */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno da seção */
+    background-color: #fff; /* Cor de fundo branco */
+}
+
+#formulario-contato form {
+    display: flex; /* Alinha os itens do formulário verticalmente */
+    flex-direction: column; /* Alinha em coluna */
+    width: 100%; /* O formulário ocupa 100% da largura disponível */
+    max-width: 400px; /* Define uma largura máxima */
+    padding: 20px; /* Espaçamento interno do formulário */
+    background-color: #e9e9e9; /* Cor de fundo suave */
+    border-radius: 15px; /* Borda radial */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+}
+
+#formulario-contato h2 {
+    text-align: center; /* Centraliza o título do formulário */
+    color: #007b5e; /* Cor de destaque para o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+#formulario-contato label {
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+    color: #333; /* Cor do texto dos rótulos */
+}
+
+#formulario-contato input,
+#formulario-contato textarea {
+    margin-bottom: 15px; /* Espaçamento abaixo dos campos */
+    padding: 10px; /* Espaçamento interno dos campos */
+    border: 1px solid #ccc; /* Borda simples */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1em; /* Tamanho da fonte dos campos */
+}
+
+#formulario-contato button {
+    padding: 10px; /* Espaçamento interno do botão */
+    background-color: #007b5e; /* Cor de fundo do botão */
+    color: white; /* Cor do texto no botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas no botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 1.1em; /* Aumenta o tamanho da fonte do botão */
+}
+
+#formulario-contato button:hover {
+    background-color: #005f47; /* Muda a cor do botão ao passar o mouse */
+}
+footer {
+    position: fixed; /* Faz o cabeçalho ficar fixo no topo */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    background-color: #007b5e; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    display: flex; /* Usa flexbox para alinhar logo e navegação */
+    align-items: center;
+    padding: 15px; /* Espaçamento interno do cabeçalho */
+    font-weight: bold; /* Deixa o texto do cabeçalho em negrito */
+}
