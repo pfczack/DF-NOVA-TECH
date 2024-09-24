@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.CSS">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <header>
+        <div class="img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMVwsIq8HCtGrdYVIMJMdbPECTDNA2ptoxsg&s">
+        </div>
+        <div class="head">
+            <h1>Cadastramos alunos como ninguém</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Cadastro de Clientes</h1>
+        <form id="alunoForm">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="number" id="idade" placeholder="Idade" required>
+            <input type="text" id="curso" placeholder="Curso Desejado" required>
+            <input type="email" id="emails" placeholder="Emails (separados por vírgula)" required>
+            <button type="submit">Cadastrar Cliente</button>
+        </form>
+        <div id="alunosList"></div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>
