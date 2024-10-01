@@ -106,12 +106,12 @@ button:hover{
 }
 
 .grid .galeria{
-    position: relative;
+    position: absolute;
     overflow: hidden;
     height: 300px;
     width: 400px;
-    border: 5px solid red;
     z-index: 0;
+    margin: 0 0 0 800px;
     /* display: flex;
     position: relative;
     width: 640px;
@@ -144,10 +144,10 @@ button:hover{
 
 @keyframes slide {
 
-    0{
+    0% {
         transform: translateX(0);
+    }
         
-      }
     20%{
         transform: translateX(0);
     }
