@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(228, 227, 227);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+header{
+    background-image: linear-gradient(10deg, rgb(161, 0, 0), rgb(230, 0, 0), rgb(255, 117, 117));
+    height: 80px;
+    width: 100%;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    padding: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+header ul li a:hover {
+    color: gray;
+}
+
+header img{
+    height: 60px;
+    width: 80px;
+    border-radius: 50%;
+    padding-left: 5px;
+}
+
+button{
+    border: none;
+    background-color: rgba(63, 63, 63, 0.336);
+    border-radius: 40px;
+    margin: 0 20px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.sessoes h1{
+    font-size: 2.8em;
+    margin: 80px 30px 10px 80px;
+    line-height: 0;
+    color: #333;
+}   
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px;
+    margin: 0 300px 0 0;
+    position: relative;
+}
+
+.grid-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 250px;
+    max-height: 250px;
+    z-index: 1;
+}
+
+.grid-card:hover {
+    transform: translateY(-20px);
+    box-shadow:  20px 50px 25px rgba(0, 0, 0, 0.295);
+    border: 1px solid rgb(207, 207, 207);
+    border-color: rgba(0, 255, 255, 0.185);
+}
+
+.grid-card img {
+    border-radius: 50%;
+}
+
+.grid-card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.grid .galeria{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 400px;
+    border: 5px solid red;
+    z-index: 0;
+    /* display: flex;
+    position: relative;
+    width: 640px;
+    height: 360px;
+    margin: 0 0 0 300px;
+    opacity: 0.6;
+    overflow: hidden;
+    z-index: 0; */
+}
+
+.grid .galeria .imgs{
+    display: flex;
+    width: 100%;
+    animation: slide 20s infinite;
+    opacity: 0.5;
+    transition: 4s ease-in-out;
+    /* animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    overflow: hidden; */
+}
+
+.grid .galeria .imgs img{
+    width: 100%;
+    height: 100%;
+    /* animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite; */
+}
+
+@keyframes slide {
+
+    0{
+        transform: translateX(0);
+        
+      }
+    20%{
+        transform: translateX(0);
+    }
+    22%{
+        transform: translateX(-25%);
+        
+    }
+    40%{
+        transform: translateX(-25%);
+    }
+    52%{
+        transform: translateX(-50%);
+    }
+    60%{
+        transform: translateX(-50%);
+    }
+    80%{
+        transform: translateX(-75%);
+    }
+    82%{
+        transform: translateX(-75%);
+    }
+    85%{
+        transform: translateX(-150%);
+    }
+    87%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+/* .grid-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* .grid-card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */ */
+
+.grid-card button:hover {
+    background-color: #0056b3;
+}
